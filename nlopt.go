@@ -1,10 +1,15 @@
 package nlopt
 
 /*
-#cgo CFLAGS: -Os
-#cgo windows LDFLAGS: -lnlopt -lm
-#cgo !windows LDFLAGS: -lm
-#cgo !windows pkg-config: nlopt
+#cgo CFLAGS: -Os -I ./lib
+#cgo linux CXXFLAGS: -I ./lib -std=c++14
+#cgo darwin CXXFLAGS: -I ./lib -std=gnu++14
+#cgo darwin,arm CXXFLAGS: -I ./lib -std=gnu++14
+#cgo windows CXXFLAGS: -I ./lib -std=c++14
+#cgo linux LDFLAGS: -L ./lib/linux  -Wl,--start-group -lstdc++ -lm -lnlopt -Wl,--end-group
+#cgo darwin LDFLAGS: -L /usr/lib -lc++ -L ./lib/darwin -lm -lnlopt
+#cgo darwin,arm LDFLAGS: -L /usr/lib -lc++ -L ./lib/darwin_arm -lm -lnlopt
+#cgo windows LDFLAGS: -L ./lib/windows -lm -lnlopt  -fPIC
 #include "nlopt.h"
 #include <stdlib.h>
 
