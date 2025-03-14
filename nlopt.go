@@ -7,8 +7,8 @@ package nlopt
 #cgo darwin,arm CXXFLAGS: -I ./lib -std=gnu++14
 #cgo windows CXXFLAGS: -I ./lib -std=c++14
 #cgo linux LDFLAGS: -L ./lib/linux  -Wl,--start-group -lstdc++ -lm -lnlopt -Wl,--end-group
-#cgo darwin LDFLAGS: -L /usr/lib -lc++ -L ./lib/darwin -lm -lnlopt
-#cgo darwin,arm LDFLAGS: -L /usr/lib -lc++ -L ./lib/darwin_arm -lm -lnlopt
+#cgo darwin,amd64 LDFLAGS: -L /usr/lib -lc++ -L ./lib/darwin -lm -lnlopt
+#cgo darwin,arm64 LDFLAGS: -L /usr/lib -lc++ -L ./lib/darwin_arm -lm -lnlopt
 #cgo windows LDFLAGS: -L ./lib/windows -lm -lnlopt  -fPIC
 #include "nlopt.h"
 #include <stdlib.h>
