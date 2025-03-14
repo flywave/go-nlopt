@@ -26,3 +26,4 @@ bazel-*
 .idea/
 *.dll
 /lib/
+build/

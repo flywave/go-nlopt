@@ -1,5 +1,0 @@
-/home/flywave/work/saas/go-nlopt/lib/linux/libnlopt.a
-/home/flywave/work/saas/go-nlopt/lib/f77funcs_.h
-/home/flywave/work/saas/go-nlopt/lib/nlopt-internal.h
-/home/flywave/work/saas/go-nlopt/lib/f77funcs.h
-/home/flywave/work/saas/go-nlopt/lib/nlopt.h
